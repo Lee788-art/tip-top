@@ -1,0 +1,210 @@
+/* ! Base Rule */
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;}
+
+p {
+    text-transform: capitalize;
+}
+::selection{
+    background-color: #024049;
+    color: #ffffff;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+/* ! Reuseable/module */
+#btn {
+    background-color: #024049;
+    padding: 0.5rem 0.9rem;
+    border-radius: 1.5rem;
+    -webkit-border-radius: 1.5rem;
+    -moz-border-radius: 1.5rem;
+    -ms-border-radius: 1.5rem;
+    -o-border-radius: 1.5rem;
+}
+.wraper {
+    width: 85%;
+    margin-inline: auto;
+    padding-inline: 5rem;
+    overflow: hidden;
+}
+/* ! Layout */
+/* ! Styles */
+
+
+main {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.navigation-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 8rem;
+}
+.logo h1{
+    font-size: 4rem;
+    font-weight: 400;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+}
+
+ul li {
+    display: inline-block;
+    
+    & a {
+        text-decoration: none;
+        font-size: 2.3rem;
+        font-weight: 300;
+        color: #ffffff;
+    }
+}
+.login-btn ul i{
+    font-size: 3rem;
+    display: none;
+}
+
+
+
+
+.hero .box-one {
+    height: calc(100vh - 9rem);
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+    color: #ffffff;
+
+
+    & h1 {
+        width: 45%;
+        font-size: 6rem;
+        font-weight: 700;
+    }
+
+    & p {
+        width: 60%;
+        font-size: 2.2rem;
+        font-weight: 200;
+        letter-spacing: 1.56px;
+    }
+
+    .input {
+        position: relative;
+
+        & input {
+            height: 7rem;
+            width: 70rem;
+            font-size: 3rem;
+            border-radius: 4rem;
+            -webkit-border-radius: 4rem;
+            -moz-border-radius: 4rem;
+            -ms-border-radius: 4rem;
+            -o-border-radius: 4rem;
+            outline-color:#024049;
+            padding-left: 2rem;
+        }
+
+        & i {
+            position: absolute;
+            background-color: #024049;
+            right: 0.5rem;
+            font-size: 4.6rem;
+            top:10%;
+            padding: 0.5rem 2rem;
+            color: white;
+            border-radius: 3rem;
+            -webkit-border-radius: 3rem;
+            -moz-border-radius: 3rem;
+            -ms-border-radius: 3rem;
+            -o-border-radius: 3rem;
+            cursor: pointer;
+}
+
+    }
+
+}
+::placeholder{
+    font-size: 2rem;
+    position: absolute;
+    left: 2rem;
+    top: 30%;
+}
+
+/* ! Media */
+@media (max-width:1400px) {
+    .wraper{
+        padding-inline: 2rem;
+    }
+}
+@media (max-width:1200px) {
+    html{
+        font-size: 56%;
+    }
+    .hero .box-one h1,p{
+        width: 80%;
+    }
+}
+@media (max-width:998px) {
+    nav,.login-btn ul li{
+        display: none;
+    }
+    .login-btn ul i{
+        display: inline-block;
+    }
+    
+    
+    .hero .box-one h1,p{
+        width: 100%;
+    }
+    .hero .box-one .input{
+        & input{
+            width: 50rem;
+        }
+    }
+}
+@media (max-width:768px) {
+    .hero .box-one .input{
+        & input{
+            width: 40rem;
+        }
+    }
+    .hero .box-one p{
+        width: 100%;
+    }
+    ::placeholder{
+        font-size: 1.7rem;
+    }
+}
+@media (max-width:576px) {
+    html{
+        font-size: 40%;
+    }
+}
+@media (width < 576px) {
+    .hero .box-one .input{
+        & input{
+            width: 35rem;
+        }
+    }
+}
